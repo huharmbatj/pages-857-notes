@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>857直播 · 简明访问指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+            background-color: #f5f3f0;
+            color: #252220;
+            line-height: 1.6;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #1c1a1a 0%, #2d2a27 100%);
+            color: #ece8e0;
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            isolation: isolate;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background: linear-gradient(to bottom, transparent, #f5f3f0);
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 350;
+            letter-spacing: 2px;
+            color: #f0e3d8;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: #c9bdb1;
+            font-weight: 300;
+        }
+
+        .hero .tagline {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.4rem 1.8rem;
+            border: 1px solid rgba(240, 227, 216, 0.3);
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #ddd0c2;
+            letter-spacing: 0.5px;
+        }
+
+        /* 正文区域：浅色 */
+        .content {
+            max-width: 780px;
+            margin: -1rem auto 0;
+            padding: 3rem 2rem 4rem;
+            background: #fcfaf8;
+            border-radius: 24px 24px 0 0;
+            box-shadow: 0 -6px 20px rgba(0,0,0,0.02);
+            position: relative;
+            z-index: 2;
+        }
+
+        .content h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin-top: 2.2rem;
+            margin-bottom: 1rem;
+            color: #2f2a25;
+            border-left: 4px solid #b35c3a;
+            padding-left: 1rem;
+        }
+
+        .content h2:first-of-type {
+            margin-top: 0.4rem;
+        }
+
+        .content p {
+            margin-bottom: 1.4rem;
+            color: #3b3530;
+            font-size: 1.05rem;
+        }
+
+        .content p.lead {
+            font-size: 1.18rem;
+            color: #4b423c;
+            margin-bottom: 1.8rem;
+            font-weight: 330;
+        }
+
+        a {
+            color: #b35c3a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+            font-weight: 450;
+        }
+
+        a:hover {
+            border-bottom-color: #b35c3a;
+            color: #8a452b;
+        }
+
+        .highlight-box {
+            background: #f2ece6;
+            border-left: 6px solid #b35c3a;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0.2rem;
+            font-size: 0.98rem;
+        }
+
+        .highlight-box strong {
+            color: #3b2922;
+            font-weight: 500;
+        }
+
+        .faq-mini {
+            background: #faf6f2;
+            padding: 1.6rem 2rem;
+            border-radius: 18px;
+            margin-top: 2.4rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1.1rem;
+            font-weight: 450;
+            color: #2f2a25;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini p {
+            font-size: 0.98rem;
+            color: #4b423c;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e2dad2;
+            font-size: 0.9rem;
+            color: #7a6f66;
+            text-align: center;
+        }
+
+        .footer-note a {
+            color: #7a6f66;
+            border-bottom: 1px dashed #c2b5aa;
+        }
+
+        .footer-note a:hover {
+            color: #b35c3a;
+            border-bottom-color: #b35c3a;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero {
+                padding: 3.5rem 1.2rem 3rem;
+            }
+            .hero h1 {
+                font-size: 2.1rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            .content {
+                padding: 2rem 1.2rem 3rem;
+                border-radius: 18px 18px 0 0;
+            }
+            .content h2 {
+                font-size: 1.35rem;
+            }
+            .highlight-box {
+                padding: 1.2rem 1.2rem;
+            }
+            .faq-mini {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>857直播 · 简明指南</h1>
+        <p>从访问方式到内容风格，我们整理了一份温和、沉稳的路线图，帮助你更快找到自己感兴趣的部分。</p>
+        <span class="tagline">适当节奏 · 清晰路径</span>
+    </section>
+
+    <main class="content">
+        <p class="lead">直播世界常常让人眼花缭乱。而一个好的观看体验，往往从省心的访问方式开始。这份指南不讲虚的，只从实际使用角度出发，让你对 <a href="https://pages-857.com">857直播</a> 有一个从容的认识。</p>
+
+        <h2>访问前的准备</h2>
+        <p>打开任何直播站点之前，都可以先问自己一个问题：我今天是来放松、了解新鲜事，还是想找特定的内容？带着意图访问，往往比漫无目的滑动更高效。<a href="https://pages-857.com">857直播</a> 的页面结构偏向简洁直观，从头部导航到推荐列表，都刻意减少了视觉噪音。你不需要花时间研究什么按钮在哪——第一眼看到的就是当前最值得关注的内容。</p>
+
+        <h2>关于直播内容的节奏</h2>
+        <p>很多用户第一次访问直播站时，会因为信息过载而迅速关掉。为了避免这种感觉，857直播在首页采用了“分类预览 + 精选合集”的模式。你可以先扫一眼标签栏，找到自己熟悉的方向，再点进去细看。每个直播间都保留了足够的呼吸感，不会把弹幕、礼物、榜单全部堆在一个界面里。</p>
+
+        <div class="highlight-box">
+            <p><strong>一点提醒：</strong> 直播是一种实时媒介，意味着错过就真的错过了。如果你对某个主播的固定时段感兴趣，不妨留意一下页面里的“常驻时间”提示——这不是所有平台都会标出来的细节，但在这里你能找到。</p>
+        </div>
+
+        <h2>从探索到习惯</h2>
+        <p>用了两三次之后，很多人会发现自己会不自觉地先点开某个熟悉的分类。这是一种很自然的使用路径。不必强迫自己去刷遍所有分区，找到三五个对胃口的直播间，观看体验就会稳定很多。假如你偶尔想换换口味，也可以试试首页底部的“随机推荐”，算法不会太激进，推荐的往往还是你同一大类型里的内容。</p>
+
+        <p>还有一个容易被忽略的功能：页面右上角的“简约模式”。打开之后，弹幕、特效、音效提示都会收敛为极简样式。如果你喜欢更安静地看直播，这个开关很实用。它默认是关闭的，但你可以随时切换。</p>
+
+        <div class="faq-mini">
+            <h3>常见疑问摘要</h3>
+            <p><strong>是否需要注册？</strong> 浏览大部分内容不需要注册，只有发送互动或订阅时才需要轻量登录。<br>
+            <strong>移动端适配如何？</strong> 页面会根据屏幕宽度自动调整布局，横屏竖屏都能正常观看。<br>
+            <strong>有没有录播回放？</strong> 部分主播提供回放，可以在直播间页面找到“往期”标签。<br>
+            <strong>遇到卡顿怎么办？</strong> 建议先检查网络，或者切换清晰度选项（标清/高清/原画）。</p>
+        </div>
+
+        <p style="margin-top: 2rem;">整体来说，<a href="https://pages-857.com">857直播</a> 追求的是“你来了就能用，用起来不累”。没有花哨的引导，没有强推的广告卡片，只有一个个直播间等你安静地走进。希望这份指南能帮你更快地融入直播的节奏，找到属于自己的观看角落。</p>
+
+        <div class="footer-note">
+            保持温和，保持好奇 · 页面内容仅为使用分享，不构成任何承诺与保证
+        </div>
+    </main>
+
+</body>
+</html>
