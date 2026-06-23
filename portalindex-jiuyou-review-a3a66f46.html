@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九游娱乐 · 稳定入口与产品说明</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: #f4f6f9;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 2rem 1.25rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    /* hero 区域 — 简洁、有层次 */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2.5rem;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      border: 1px solid #eaedf2;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #111827;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero .subhead {
+      font-size: 1.05rem;
+      color: #4b5563;
+      max-width: 600px;
+      margin: 0 auto 1.8rem;
+      font-weight: 400;
+    }
+
+    .hero .meta-badge {
+      display: inline-block;
+      background: #eef1f6;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      color: #3b4a5a;
+      border: 1px solid #d9e0e9;
+      margin-bottom: 0.3rem;
+    }
+
+    .hero .tagline {
+      font-size: 0.9rem;
+      color: #6b7280;
+      border-top: 1px solid #e4e9f0;
+      padding-top: 1.4rem;
+      margin-top: 0.6rem;
+    }
+
+    /* 卡片网格 — 细边框 + 柔和阴影 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 1.8rem 1.6rem 2rem;
+      border: 1px solid #e8ecf2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s ease, transform 0.15s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      transform: translateY(-1px);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 0.6rem;
+    }
+
+    .card .small-note {
+      font-size: 0.85rem;
+      color: #6b7280;
+      border-top: 1px dashed #dce1e9;
+      padding-top: 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .highlight-badge {
+      display: inline-block;
+      background: #edf2f9;
+      padding: 0.2rem 0.8rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #1f3a5f;
+      letter-spacing: 0.02em;
+      border: 1px solid #d3dceb;
+      margin-right: 0.4rem;
+    }
+
+    /* 使用场景 —— 横向双列 */
+    .scenario-section {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 1.8rem 2.2rem;
+      border: 1px solid #eaedf2;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.5rem;
+    }
+
+    .scenario-section h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #111827;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #9aa9bb;
+      padding-left: 1rem;
+    }
+
+    .scenario-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem 2.5rem;
+    }
+
+    .scenario-item {
+      flex: 1 1 240px;
+    }
+
+    .scenario-item h4 {
+      font-weight: 500;
+      font-size: 1.05rem;
+      color: #1f2937;
+      margin-bottom: 0.4rem;
+    }
+
+    .scenario-item p {
+      font-size: 0.9rem;
+      color: #4b5563;
+    }
+
+    /* faq 摘要 + 提示 */
+    .faq-summary {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.6rem 1.8rem 1.8rem;
+      border: 1px solid #eaedf2;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.5rem;
+    }
+
+    .faq-item {
+      flex: 1 1 220px;
+    }
+
+    .faq-q {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e293b;
+      margin-bottom: 0.15rem;
+    }
+
+    .faq-a {
+      font-size: 0.85rem;
+      color: #5e6a7a;
+    }
+
+    .inline-link-wrapper {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 1.2rem 1.8rem;
+      border: 1px solid #eaedf2;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.02);
+      margin-bottom: 1.8rem;
+      font-size: 0.95rem;
+      color: #1f2937;
+      text-align: center;
+    }
+
+    .inline-link-wrapper a {
+      color: #1f4a7a;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .inline-link-wrapper a:hover {
+      border-bottom-color: #1f4a7a;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: #7f8b9b;
+      border-top: 1px solid #e2e7ef;
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 1rem 0.75rem; }
+      .hero h1 { font-size: 1.7rem; }
+      .card-grid { gap: 1rem; }
+      .scenario-section { padding: 1.5rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <!-- hero 区域 -->
+  <div class="hero">
+    <div class="meta-badge">产品说明 · 稳定入口</div>
+    <h1>九游娱乐 · 简明导航</h1>
+    <p class="subhead">
+      一个聚焦信息聚合与页面入口的中立说明页，帮助使用者快速了解服务边界、特点与合适的使用方式。
+    </p>
+    <div class="tagline">基于持续可用的链接结构 · 轻量 · 清晰</div>
+  </div>
+
+  <!-- 卡片: 摘要 + 亮点 + 使用建议 + 可信说明 -->
+  <div class="card-grid">
+    <div class="card">
+      <h3><span class="highlight-badge">01</span> 摘要</h3>
+      <p>九游娱乐提供数字内容索引与页面引导，整体结构以稳定访问为优先。页面经过常规实测，路径简洁、无多余跳转，适合直接使用。</p>
+      <div class="small-note">入口维护周期稳定，基础功能保持在线。</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight-badge">02</span> 亮点</h3>
+      <p>清晰的功能分区与低干扰布局；无强制绑定或复杂验证流程。页面响应较快，适配主流设备与浏览器视口。</p>
+      <div class="small-note">实测加载速度与基础可用性优先。</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight-badge">03</span> 使用建议</h3>
+      <p>建议直接通过 <a href="https://portalindex-jiuyou.com" style="color:#1f4a7a;text-decoration:none;font-weight:500;">九游娱乐</a> 访问，避免使用第三方非标渠道。日常浏览时注意确认链接前缀与页面来源。</p>
+      <div class="small-note">推荐使用最新版 Chromium 或 Safari 内核浏览器。</div>
+    </div>
+
+    <div class="card">
+      <h3><span class="highlight-badge">04</span> 可信说明</h3>
+      <p>本页提供的信息均基于公开可验证的页面结构与常规使用经验。未包含未经验证的功能承诺。页面自身保持克制的信息展示，不引导非必要操作。</p>
+      <div class="small-note">如遇到异常跳转或内容不符，建议检查网络环境。</div>
+    </div>
+  </div>
+
+  <!-- 场景 / 使用场景 -->
+  <div class="scenario-section">
+    <h2>适用场景与页面说明</h2>
+    <div class="scenario-flex">
+      <div class="scenario-item">
+        <h4>快速信息定位</h4>
+        <p>对于需要从统一入口浏览内容的人群，九游娱乐的页面布局将主要功能放在显眼位置，减少查找成本。</p>
+      </div>
+      <div class="scenario-item">
+        <h4>日常访问参考</h4>
+        <p>页面结构适合作为固定书签，用于定期查看信息更新。整体维护节奏平稳，可长期保留在收藏夹中。</p>
+      </div>
+      <div class="scenario-item">
+        <h4>对比与验证</h4>
+        <p>当用户需要确认页面是否完整可用时，可直接比对实际页面与说明页描述是否一致，降低信息偏差。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 + 提示 -->
+  <div class="faq-summary">
+    <div class="faq-item">
+      <div class="faq-q">Q: 页面稳定吗？</div>
+      <div class="faq-a">基础入口保持在线，建议定期清除缓存以获得最新样式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 是否需要注册？</div>
+      <div class="faq-a">浏览索引内容无需注册，部分交互可能依赖基础会话状态。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 如何确认是正版入口？</div>
+      <div class="faq-a">核对浏览器地址栏域名是否为 portalindex-jiuyou.com，并注意页面安全标识。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Q: 移动端支持如何？</div>
+      <div class="faq-a">页面具备响应式设计，在手机与平板上有较好的可读性。</div>
+    </div>
+  </div>
+
+  <!-- 内嵌链接行 (自然句子) -->
+  <div class="inline-link-wrapper">
+    <span>如需直接使用，建议将 <a href="https://portalindex-jiuyou.com">九游娱乐</a> 作为主要访问地址；日常使用前可留意页面版本描述。本页仅作说明参考，不构成任何形式的担保。</span>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer-note">
+    页面说明 · 内容基于产品结构撰写 · 无诱导性表述
+  </div>
+</div>
+</body>
+</html>
